@@ -1,17 +1,17 @@
-qtd = 0
-soma = 0
-media = 0
-valor = float(input("digiteum valor:"))
+def lerNotas():
+  n = float(input('digite uma nota para o aluno(a): '))
+  return n
 
-while (valor > 0.0):
-  soma = soma + valor
-  qtd = qtd + 1
-  # entrada de valores
-  valor = float(input("digite um valor:"))
+def resultado(n1, n2):
+  media = (n1+n2)/2
+  print('nota 1: ', n1)
+  print('nota 2: ', n2)
+  print("média: ", media, "resultado: ", end="")
+  if media >= 7:
+    print('aprovado')
+  else:
+    print('reprovado')
 
-# caso digite um valor negativo, lanço encerra
-
-media = soma / qtd
-print("\n Total da soma: ", soma)
-print("\n Quantidade de valores digitados: ", qtd)
-print("\n Media dos valores: ", media)
+a = lerNotas()
+b = lerNotas()
+resultado(a, b)
